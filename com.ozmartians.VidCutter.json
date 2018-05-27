@@ -1,7 +1,7 @@
 {
     "app-id": "com.ozmartians.VidCutter",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.10",
+    "runtime-version": "5.11",
     "sdk": "org.kde.Sdk",
     "command": "vidcutter",
     "finish-args": [
@@ -27,6 +27,13 @@
     ],
     "modules": [{
         "name": "PyOpenGL",
+        "cleanup": [
+            "/include",
+            "/lib/*.a",
+            "/lib/*.la",
+            "/lib/pkgconfig",
+            "/share"
+        ],
         "buildsystem": "simple",
         "build-commands": [
             "pip3 install --prefix=${FLATPAK_DEST} ."
@@ -55,7 +62,7 @@
         "config-opts": ["--disable-static", "--enable-x11"],
         "buildsystem": "simple",
         "build-commands": [
-            "python3 configure.py --confirm-license --no-docstrings --assume-shared --no-sip-files --no-qml-plugin --no-tools --no-qsci-api -d ${FLATPAK_DEST}/lib/python3.5/site-packages --sip=${FLATPAK_DEST}/bin/sip --sip-incdir=${FLATPAK_DEST}/include --stubsdir=${FLATPAK_DEST}/lib/python3.5/site-packages --disable=QtSensors --disable=QtWebEngine --disable=QtQuick --disable=QtQml --disable=QtTest --disable=QtWebChannel --disable=QtWebEngineCore --disable=QWebEngineWidgets --disable=QtQuickWidgets --disable=QtSql --disable=QtXmlPatterns --disable=QtMultimedia --disable=QtMultimediaWidgets --disable=QtLocation --disable=QtDesigner --disable=QtBluetooth --disable=QtWebKit --disable=QtWebKitWidgets --disable=QtNfc --disable=QtPositioning",
+            "python3 configure.py --confirm-license --no-docstrings --assume-shared --no-sip-files --no-qml-plugin --no-tools --no-qsci-api -d ${FLATPAK_DEST}/lib/python3.5/site-packages --sip=${FLATPAK_DEST}/bin/sip --sip-incdir=${FLATPAK_DEST}/include --stubsdir=${FLATPAK_DEST}/lib/python3.5/site-packages --disable=QtSensors --disable=QtWebEngine --disable=QtQuick --disable=QtQml --disable=QtTest --disable=QtWebChannel --disable=QtWebEngineCore --disable=QWebEngineWidgets --disable=QtQuickWidgets --disable=QtSql --disable=QtXmlPatterns --disable=QtMultimedia --disable=QtMultimediaWidgets --disable=QtLocation --disable=QtDesigner --disable=QtOpenGL --disable=QtBluetooth --disable=QtWebKit --disable=QtWebKitWidgets --disable=QtNfc --disable=QtPositioning",
             "make -j $(nproc)",
             "make install"
         ],
@@ -64,7 +71,7 @@
             "url": "https://sourceforge.net/projects/pyqt/files/PyQt5/PyQt-5.10.1/PyQt5_gpl-5.10.1.tar.gz",
             "sha256": "9932e971e825ece4ea08f84ad95017837fa8f3f29c6b0496985fa1093661e9ef"
         }],
-        "modules": [{
+          "modules": [{
             "name": "sip",
             "buildsystem": "simple",
             "build-commands": [
@@ -339,7 +346,7 @@
         "sources": [{
             "type": "git",
             "branch": "flatpak",
-            "commit": "a8baee5675e65d9cc6a47915a1e235e49445b67b",
+            "commit": "63d355f0a81b02ac045f3e5b097be167ec67a811",
             "url": "https://github.com/ozmartian/vidcutter.git"
         }]
     }]
