@@ -275,6 +275,16 @@
                     "type": "archive",
                     "url": "https://bitbucket.org/multicoreware/x265/downloads/x265_2.8.tar.gz",
                     "sha256": "6e59f9afc0c2b87a46f98e33b5159d56ffb3558a49d8e3d79cb7fdc6b7aaa863"
+                },
+                {
+                    "type": "patch",
+                    "path": "x265-arm-01.patch",
+                    "only-arches": ["arm", "aarch64"]
+                },
+                {
+                    "type": "patch",
+                    "path": "x265-arm-02.patch",
+                    "only-arches": ["arm", "aarch64"]
                 }]
             },
             {
