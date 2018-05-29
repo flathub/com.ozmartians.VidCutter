@@ -278,7 +278,12 @@
                 },
                 {
                     "type": "patch",
-                    "path": "x265-arm.patch",
+                    "path": "x265-arm-01.patch",
+                    "only-arches": ["arm", "aarch64"]
+                },
+                {
+                    "type": "patch",
+                    "path": "x265-arm-02.patch",
                     "only-arches": ["arm", "aarch64"]
                 }]
             },
