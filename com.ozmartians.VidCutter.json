@@ -120,7 +120,7 @@
                 "cleanup": ["/bin", "/include", "/lib/pkgconfig", "/lib/*.la", "/share/man"],
                 "buildsystem": "simple",
                 "build-commands": [
-                	"meson setup --prefix=${FLATPAK_DEST} --buildtype=release build -D docs=false",
+                    "meson setup --prefix=${FLATPAK_DEST} --buildtype=release build -D docs=false",
                     "ninja -C build",
                     "ninja -C build install"
                 ],
@@ -360,7 +360,7 @@
         "sources": [{
             "type": "git",
             "branch": "flatpak",
-            "commit": "2b29605228ab6c2329efdfda410c756337e421e6",
+            "commit": "17cdc33fdbc0db809ef180cc8926d8d3fe8a7dbd",
             "url": "https://github.com/ozmartian/vidcutter.git"
         }]
     }]
