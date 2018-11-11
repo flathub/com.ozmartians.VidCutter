@@ -53,12 +53,11 @@ diff -urN a/source/common/cpu.cpp b/source/common/cpu.cpp
 --- a/source/common/cpu.cpp 2018-10-08 10:04:19.938014851 -0600
 +++ b/source/common/cpu.cpp 2018-10-08 10:04:37.277342636 -0600
 @@ -37,7 +37,7 @@
- #include 
+ #include <machine/cpu.h>
  #endif
  
 -#if X265_ARCH_ARM && !defined(HAVE_NEON)
 +#if X265_ARCH_ARM && (!defined(HAVE_NEON) || HAVE_NEON==0)
- #include 
- #include 
+ #include <signal.h>
+ #include <setjmp.h>
  static sigjmp_buf jmpbuf;
- 
