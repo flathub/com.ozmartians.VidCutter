@@ -1,22 +1,26 @@
-From 8911cbae1f7f868b213c5c0aa41cf827cdf367bb Mon Sep 17 00:00:00 2001
-From: Jayashree <jayashree.c@multicorewareinc.com>
-Date: Fri, 25 May 2018 10:26:05 +0530
-Subject: [PATCH] Fix build error on on ppc64le
 
----
- source/common/param.cpp | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
-diff --git a/source/common/param.cpp b/source/common/param.cpp
-index 31bcbc7d3..4a6d0c8a5 100644
---- a/source/common/param.cpp
-+++ b/source/common/param.cpp
-@@ -633,7 +633,7 @@ int x265_param_parse(x265_param* p, const char* name, const char* value)
-         if (bValueWasNull)
-             p->cpuid = atobool(value);
-         else
--            p->cpuid = parseCpuName(value, bError);
-+            p->cpuid = parseCpuName(value, bError, false);
+--- x265-2.9/source/common/cpu.cpp
++++ x265-2.9/source/common/cpu.cpp
+@@ -110,6 +110,11 @@
+     { "", 0 },
+ };
+ 
++bool detect512()
++{
++    return(enable512);
++}
++
+ #if X265_ARCH_X86
+ 
+ extern "C" {
+@@ -123,10 +128,6 @@
+ #pragma warning(disable: 4309) // truncation of constant value
  #endif
-     }
-     OPT("fps")
+ 
+-bool detect512()
+-{
+-    return(enable512);
+-}
+ uint32_t cpu_detect(bool benableavx512 )
+ {
+ 
