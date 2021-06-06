@@ -480,7 +480,7 @@
             "mkdir -p ${FLATPAK_DEST}/share/fonts",
             "cp vidcutter/fonts/* ${FLATPAK_DEST}/share/fonts",
             "mkdir -p ${FLATPAK_DEST}/share/icons",
-            "cp data/icons/vidcutter.png ${FLATPAK_DEST}/share/icons/com.ozmartians.VidCutter.png"
+            "cp -R data/icons/* ${FLATPAK_DEST}/share/icons"
         ],
         "sources": [{
             "type": "git",
