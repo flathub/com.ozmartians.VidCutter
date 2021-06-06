@@ -474,7 +474,7 @@
         "name": "vidcutter",
         "buildsystem": "simple",
         "build-commands": [
-            "python3 setup.py install --root ${FLATPAK_DEST}"
+            "python3 setup.py install --prefix ${FLATPAK_DEST}"
         ],
         "post-install": [
             "mkdir -p ${FLATPAK_DEST}/share/fonts",
