@@ -481,9 +481,9 @@
             "cp vidcutter/fonts/* ${FLATPAK_DEST}/share/fonts"
         ],
         "sources": [{
-            "type": "archive",
-            "url": "https://github.com/ozmartian/vidcutter/archive/master.tar.gz",
-            "sha256": "e882115ae06f8cb812c153b5855a2cd7e5d4670d7f08ccf202c3423fb50aa53b"
+            "type": "git",
+            "commit": "3f94161e88c8294f3d137939e23bb10fa88ade85",
+            "url": "https://github.com/ozmartian/vidcutter.git"
         }]
     }]
 }
