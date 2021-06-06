@@ -76,7 +76,7 @@
             "name": "sip",
             "buildsystem": "simple",
             "build-commands": [
-                "python3 setup.py install"
+                "python3 setup.py install --prefix ${FLATPAK_DEST}"
             ],
             "sources": [{
                 "type": "archive",
