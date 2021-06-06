@@ -63,7 +63,7 @@
         "config-opts": ["--disable-static", "--enable-x11"],
         "buildsystem": "simple",
         "build-commands": [
-            "python3 configure.py --confirm-license --no-docstrings --assume-shared --no-sip-files --no-qml-plugin --no-tools --no-qsci-api -d ${FLATPAK_DEST}/lib/python3.8/site-packages --disable=QtSensors --disable=QtWebEngine --disable=QtQuick --disable=QtQml --disable=QtTest --disable=QtWebChannel --disable=QtWebEngineCore --disable=QWebEngineWidgets --disable=QtQuickWidgets --disable=QtSql --disable=QtXmlPatterns --disable=QtMultimedia --disable=QtMultimediaWidgets --disable=QtLocation --disable=QtDesigner --disable=QtOpenGL --disable=QtBluetooth --disable=QtWebKit --disable=QtWebKitWidgets --disable=QtNfc --disable=QtPositioning",
+            "python3 configure.py --confirm-license --no-docstrings --assume-shared --no-sip-files --no-qml-plugin --no-tools --no-qsci-api -d ${FLATPAK_DEST}/lib/python3.7/site-packages --sip=${FLATPAK_DEST}/bin/sip --sip-incdir=${FLATPAK_DEST}/include --stubsdir=${FLATPAK_DEST}/lib/python3.7/site-packages --disable=QtSensors --disable=QtWebEngine --disable=QtQuick --disable=QtQml --disable=QtTest --disable=QtWebChannel --disable=QtWebEngineCore --disable=QWebEngineWidgets --disable=QtQuickWidgets --disable=QtSql --disable=QtXmlPatterns --disable=QtMultimedia --disable=QtMultimediaWidgets --disable=QtLocation --disable=QtDesigner --disable=QtOpenGL --disable=QtBluetooth --disable=QtWebKit --disable=QtWebKitWidgets --disable=QtNfc --disable=QtPositioning",            
             "make -j $(nproc)",
             "make install"
         ],
@@ -73,10 +73,24 @@
             "sha256": "2a69597e0dd11caabe75fae133feca66387819fc9bc050f547e5551bce97e5be"
         }],
           "modules": [{
+            "name": "sip",
+            "buildsystem": "simple",
+            "build-commands": [
+                "python3 configure.py --sip-module PyQt5.sip -b ${FLATPAK_DEST}/bin -d ${FLATPAK_DEST}/lib/python3.8/site-packages -e ${FLATPAK_DEST}/include -v ${FLATPAK_DEST}/share/sip --stubsdir=${FLATPAK_DEST}/lib/python3.8/site-packages",
+                "make",
+                "make install"
+            ],
+            "sources": [{
+                "type": "archive",
+                "url": "https://www.riverbankcomputing.com/static/Downloads/sip/4.19.21/sip-4.19.21.tar.gz",
+                "sha256": "6af9979ab41590e8311b8cc94356718429ef96ba0e3592bdd630da01211200ae"
+            }]
+        },
+        {
             "name": "PyQt5_sip",
             "buildsystem": "simple",
             "build-commands": [
-                "python3 setup.py install --root ${FLATPAK_DEST} --prefix ."
+                "python3 setup.py install --root ${FLATPAK_DEST}"
             ],
             "sources": [{
                 "type": "archive",
