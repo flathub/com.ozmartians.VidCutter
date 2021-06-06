@@ -82,8 +82,8 @@
             ],
             "sources": [{
                 "type": "archive",
-                "url": "https://www.riverbankcomputing.com/static/Downloads/sip/4.19.21/sip-4.19.21.tar.gz",
-                "sha256": "6af9979ab41590e8311b8cc94356718429ef96ba0e3592bdd630da01211200ae"
+                "url": "https://www.riverbankcomputing.com/static/Downloads/sip/4.19.25/sip-4.19.25.tar.gz",
+                "sha256": "b39d93e937647807bac23579edbff25fe46d16213f708370072574ab1f1b4211"
             }]
         },
         {
