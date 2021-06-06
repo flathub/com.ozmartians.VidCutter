@@ -87,6 +87,9 @@
         {
             "name": "sip",
             "buildsystem": "simple",
+            "ensure-writable": [
+                "${FLATPAK_DEST}/lib/python3.8/site-packages/easy-install.pth"
+            ],
             "build-commands": [
                 "python3 setup.py install --prefix ${FLATPAK_DEST}"
             ],
