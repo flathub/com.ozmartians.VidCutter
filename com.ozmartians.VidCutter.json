@@ -374,8 +374,8 @@
                 ],
                 "sources": [{
                     "type": "archive",
-                    "url": "https://bitbucket.org/multicoreware/x265_git/downloads/x265_3.5.tar.gz",
-                    "sha256": "e70a3335cacacbba0b3a20ec6fecd6783932288ebc8163ad74bcc9606477cae8"
+                    "url": "https://bitbucket.org/multicoreware/x265_git/downloads/x265_3.3.tar.gz",
+                    "sha256": "c6d744a87eda55560da715f56f878640554ddc06e2d0fcbd822fa330affc22cc"
                 }]
             },
             {
@@ -406,8 +406,8 @@
                 ],
                 "sources": [{
                     "type": "archive",
-                    "url": "https://bitbucket.org/multicoreware/x265_git/downloads/x265_3.5.tar.gz",
-                    "sha256": "e70a3335cacacbba0b3a20ec6fecd6783932288ebc8163ad74bcc9606477cae8"
+                    "url": "https://bitbucket.org/multicoreware/x265_git/downloads/x265_3.3.tar.gz",
+                    "sha256": "c6d744a87eda55560da715f56f878640554ddc06e2d0fcbd822fa330affc22cc"
                 }]
             },
             {
@@ -482,8 +482,8 @@
         ],
         "sources": [{
             "type": "archive",
-            "url": "https://github.com/ozmartian/vidcutter/archive/6.0.5.tar.gz",
-            "sha256": "b33c50606de20d480f14682d4c958d266257a34f8b2765a6c1a7aef991bec769"
+            "url": "https://github.com/ozmartian/vidcutter/archive/master.tar.gz",
+            "sha256": "e882115ae06f8cb812c153b5855a2cd7e5d4670d7f08ccf202c3423fb50aa53b"
         }]
     }]
 }
