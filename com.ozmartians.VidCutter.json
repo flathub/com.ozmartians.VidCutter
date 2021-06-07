@@ -479,9 +479,8 @@
         "post-install": [
             "mkdir -p ${FLATPAK_DEST}/share/fonts",
             "cp vidcutter/fonts/* ${FLATPAK_DEST}/share/fonts",
-            "mkdir -p ${FLATPAK_DEST}/share/icons",
-            "cp data/icons/vidcutter.png ${FLATPAK_DEST}/share/icons/com.ozmartians.VidCutter.png",
-            "cp data/icons/vidcutter.png ${FLATPAK_DEST}/share/icons/com.ozmartians.VidCutter"
+            "mkdir -p ${FLATPAK_DEST}/usr",
+            "ln -sf ${FLATPAK_DEST}/share ${FLATPAK_DEST}/usr"
         ],
         "sources": [{
             "type": "git",
