@@ -474,11 +474,13 @@
         "name": "vidcutter",
         "buildsystem": "simple",
         "build-commands": [
-            "python3 setup.py install --prefix ${FLATPAK_DEST}"
+            "pip3 install --prefix=${FLATPAK_DEST} ."
         ],
         "post-install": [
             "mkdir -p ${FLATPAK_DEST}/share/fonts",
-            "cp vidcutter/fonts/* ${FLATPAK_DEST}/share/fonts"
+            "cp vidcutter/fonts/* ${FLATPAK_DEST}/share/fonts",
+            "mkdir -p ${FLATPAK_DEST}/usr",
+            "ln -sf ${FLATPAK_DEST}/share ${FLATPAK_DEST}/usr"
         ],
         "sources": [{
             "type": "git",
