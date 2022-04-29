@@ -1,4 +1,4 @@
-{
+    {
     "app-id": "com.ozmartians.VidCutter",
     "runtime": "org.kde.Platform",
     "runtime-version": "5.15-21.08",
@@ -371,8 +371,8 @@
                 ],
                 "sources": [{
                     "type": "archive",
-                    "url": "https://bitbucket.org/multicoreware/x265_git/downloads/x265_3.5.tar.gz",
-                    "sha256": "e70a3335cacacbba0b3a20ec6fecd6783932288ebc8163ad74bcc9606477cae8"
+                    "url": "https://bitbucket.org/multicoreware/x265_git/downloads/x265_3.3.tar.gz",
+                    "sha256": "c6d744a87eda55560da715f56f878640554ddc06e2d0fcbd822fa330affc22cc"
                 }]
             },
             {
@@ -403,8 +403,8 @@
                 ],
                 "sources": [{
                     "type": "archive",
-                    "url": "https://bitbucket.org/multicoreware/x265_git/downloads/x265_3.5.tar.gz",
-                    "sha256": "e70a3335cacacbba0b3a20ec6fecd6783932288ebc8163ad74bcc9606477cae8"
+                    "url": "https://bitbucket.org/multicoreware/x265_git/downloads/x265_3.3.tar.gz",
+                    "sha256": "c6d744a87eda55560da715f56f878640554ddc06e2d0fcbd822fa330affc22cc"
                 }]
             },
             {
