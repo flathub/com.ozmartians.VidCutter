@@ -1,4 +1,4 @@
-    {
+{
     "app-id": "com.ozmartians.VidCutter",
     "runtime": "org.kde.Platform",
     "runtime-version": "5.15-21.08",
@@ -476,11 +476,9 @@
         "post-install": [
             "mkdir -p ${FLATPAK_DEST}/share/fonts",
             "cp vidcutter/fonts/* ${FLATPAK_DEST}/share/fonts",
-            "cp -R data/icons/ ${FLATPAK_DEST}/share/icons",
+            "cp -R data/icons/ ${FLATPAK_DEST}/share/",
             "mkdir -p ${FLATPAK_DEST}/share/applications",
-            "cp data/desktop/com.ozmartians.VidCutter.desktop ${FLATPAK_DEST}/share/applications",
-            "mkdir -p ${FLATPAK_DEST}/usr",
-            "ln -sf ${FLATPAK_DEST}/share ${FLATPAK_DEST}/usr"
+            "cp data/desktop/com.ozmartians.VidCutter.desktop ${FLATPAK_DEST}/share/applications"
         ],
         "sources": [{
             "type": "git",
