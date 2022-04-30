@@ -477,6 +477,8 @@
             "mkdir -p ${FLATPAK_DEST}/share/fonts",
             "cp vidcutter/fonts/* ${FLATPAK_DEST}/share/fonts",
             "cp -R data/icons/ ${FLATPAK_DEST}/share/icons",
+            "mkdir -p ${FLATPAK_DEST}/share/applications",
+            "cp data/desktop/com.ozmartians.VidCutter.desktop ${FLATPAK_DEST}/share/applications",
             "mkdir -p ${FLATPAK_DEST}/usr",
             "ln -sf ${FLATPAK_DEST}/share ${FLATPAK_DEST}/usr"
         ],
