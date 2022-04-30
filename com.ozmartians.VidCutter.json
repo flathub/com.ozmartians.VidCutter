@@ -474,11 +474,11 @@
             "pip3 install --prefix=${FLATPAK_DEST} ."
         ],
         "post-install": [
+            "mkdir -p ${FLATPAK_DEST}/share/applications",
             "mkdir -p ${FLATPAK_DEST}/share/fonts",
             "mkdir -p ${FLATPAK_DEST}/share/icons",
             "cp vidcutter/fonts/* ${FLATPAK_DEST}/share/fonts",
-            "cp -R data/icons/* ${FLATPAK_DEST}/share/icons",
-            "mkdir -p ${FLATPAK_DEST}/share/applications",
+            "cp -R data/icons/hicolor ${FLATPAK_DEST}/share/icons",
             "cp data/desktop/com.ozmartians.VidCutter.desktop ${FLATPAK_DEST}/share/applications"
         ],
         "sources": [{
