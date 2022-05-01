@@ -328,7 +328,8 @@
             ],
             "sources": [{
                 "type": "git",
-                "url": "https://github.com/MediaArea/ZenLib.git"
+                "url": "https://github.com/MediaArea/ZenLib.git",
+                "commit": "5fe5d611141e720edecff87e51a2d4d0ad0586b1"
             }]
         },
         {
@@ -341,7 +342,8 @@
             ],
             "sources": [{
                 "type": "git",
-                "url": "https://github.com/MediaArea/MediaInfoLib.git"
+                "url": "https://github.com/MediaArea/MediaInfoLib.git",
+                "commit": "382a3a62311053e0c92e6b05c41f4c630044953e"
             }]
         }]
     },
