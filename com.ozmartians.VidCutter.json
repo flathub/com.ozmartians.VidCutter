@@ -128,15 +128,16 @@
             "modules": [{
                 "name": "fribidi",
                 "cleanup": ["/bin", "/include", "/lib/pkgconfig", "/lib/*.la", "/share/man"],
-                "buildsystem": "simple",
-                "build-commands": [
-                    "meson setup --prefix=${FLATPAK_DEST} --buildtype=release build -D docs=false",
-                    "ninja -C build",
-                    "ninja -C build install"
+                "buildsystem": "meson",
+                "config-opts": [
+                    "--buildtype=release",
+                    "-Ddocs=false"
                 ],
                 "sources": [{
                     "type": "git",
-                    "url": "https://github.com/fribidi/fribidi.git"
+                    "url": "https://github.com/fribidi/fribidi.git",
+                    "tag": "v1.0.12",
+                    "commit": "6428d8469e536bcbb6e12c7b79ba6659371c435a"
                 }]
             }]
         },
