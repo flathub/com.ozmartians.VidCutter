@@ -144,96 +144,30 @@
         {
             "name": "ffmpeg",
             "cleanup": ["/include", "/lib/pkgconfig", "/share/ffmpeg/examples"],
+            "config-opts": [
+                "--enable-shared",
+                "--disable-static",
+                "--disable-debug",
+                "--enable-gnutls",
+                "--disable-doc",
+                "--disable-ffplay",
+                "--enable-gpl",
+                "--enable-libass",
+                "--enable-libfribidi",
+                "--enable-libmp3lame",
+                "--enable-libpulse",
+                "--enable-libtheora",
+                "--enable-libvorbis",
+                "--enable-libvpx",
+                "--enable-libx264",
+                "--enable-libx265",
+                "--enable-libxvid"
+            ],
             "build-options": {
                 "arch": {
-                    "aarch64": {
-                        "config-opts": [
-                            "--enable-shared",
-                            "--disable-static",
-                            "--disable-debug",
-                            "--enable-gnutls",
-                            "--disable-doc",
-                            "--disable-ffplay",
-                            "--enable-gpl",
-                            "--enable-libass",
-                            "--enable-libfribidi",
-                            "--enable-libmp3lame",
-                            "--enable-libpulse",
-                            "--enable-libtheora",
-                            "--enable-libvorbis",
-                            "--enable-libvpx",
-                            "--enable-libx264",
-                            "--enable-libx265",
-                            "--enable-libxvid",
-                            "--enable-version3"
-                        ]
-                    },
-                    "arm": {
-                        "config-opts": [
-                            "--enable-shared",
-                            "--disable-static",
-                            "--disable-debug",
-                            "--enable-gnutls",
-                            "--disable-doc",
-                            "--disable-ffplay",
-                            "--enable-gpl",
-                            "--enable-libass",
-                            "--enable-libfribidi",
-                            "--enable-libmp3lame",
-                            "--enable-libpulse",
-                            "--enable-libtheora",
-                            "--enable-libvorbis",
-                            "--enable-libvpx",
-                            "--enable-libx264",
-                            "--enable-libx265",
-                            "--enable-libxvid",
-                            "--enable-version3"
-                        ]
-                    },
-                    "i386": {
-                        "config-opts": [
-                            "--enable-shared",
-                            "--disable-static",
-                            "--disable-debug",
-                            "--enable-gnutls",
-                            "--disable-doc",
-                            "--disable-ffplay",
-                            "--enable-gpl",
-                            "--enable-libass",
-                            "--enable-libfribidi",
-                            "--enable-libmp3lame",
-                            "--enable-libpulse",
-                            "--enable-libtheora",
-                            "--enable-libvorbis",
-                            "--enable-libvpx",
-                            "--enable-libx264",
-                            "--enable-libx265",
-                            "--enable-libxvid",
-                            "--enable-nvdec",
-                            "--enable-version3"
-                        ]
-                    },
                     "x86_64": {
                         "config-opts": [
-                            "--enable-shared",
-                            "--disable-static",
-                            "--disable-debug",
-                            "--enable-gnutls",
-                            "--disable-doc",
-                            "--disable-ffplay",
-                            "--enable-gpl",
-                            "--enable-libass",
-                            "--enable-libfribidi",
-                            "--enable-libmp3lame",
-                            "--enable-libpulse",
-                            "--enable-libtheora",
-                            "--enable-libvorbis",
-                            "--enable-libvpx",
-                            "--enable-libx264",
-                            "--enable-libx265",
-                            "--enable-libxvid",
-                            "--enable-nvdec",
-                            "--enable-version3"
+                            "--enable-nvdec"
                         ]
                     }
                 }
