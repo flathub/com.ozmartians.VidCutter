@@ -176,10 +176,12 @@
                 "type": "archive",
                 "url": "https://ffmpeg.org/releases/ffmpeg-5.0.1.tar.xz",
                 "sha256": "ef2efae259ce80a240de48ec85ecb062cecca26e4352ffb3fda562c21a93007b"
-            }],     
+            }],
             "modules": [{
                 "name": "ffnvcodec",
-                "only-arches": ["i386", "x86_64"],
+                "only-arches": [
+                    "x86_64"
+                ],
                 "buildsystem": "simple",
                 "build-commands": [
                     "make",
@@ -187,7 +189,9 @@
                 ],
                 "sources": [{
                     "type": "git",
-                    "url": "https://git.videolan.org/git/ffmpeg/nv-codec-headers.git"
+                    "url": "https://git.videolan.org/git/ffmpeg/nv-codec-headers.git",
+                    "tag": "n11.1.5.1",
+                    "commit": "84483da70d903239d4536763fde8c7e6c4e80784"
                 }]
             },
             {
