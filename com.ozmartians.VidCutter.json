@@ -60,7 +60,7 @@
         "config-opts": ["--disable-static", "--enable-x11"],
         "buildsystem": "simple",
         "build-commands": [
-            "python3 configure.py --confirm-license --no-docstrings --assume-shared --no-sip-files --no-qml-plugin --no-tools --no-qsci-api -d ${FLATPAK_DEST}/lib/python3.9/site-packages --sip=${FLATPAK_DEST}/bin/sip --sip-incdir=${FLATPAK_DEST}/include --stubsdir=${FLATPAK_DEST}/lib/python3.9/site-packages --disable=QtSensors --disable=QtWebEngine --disable=QtQuick --disable=QtQml --disable=QtTest --disable=QtWebChannel --disable=QtWebEngineCore --disable=QWebEngineWidgets --disable=QtQuickWidgets --disable=QtSql --disable=QtXmlPatterns --disable=QtMultimedia --disable=QtMultimediaWidgets --disable=QtLocation --disable=QtDesigner --disable=QtOpenGL --disable=QtBluetooth --disable=QtWebKit --disable=QtWebKitWidgets --disable=QtNfc --disable=QtPositioning",            
+            "python3 configure.py --confirm-license --no-docstrings --assume-shared --no-sip-files --no-qml-plugin --no-tools --no-qsci-api -d ${FLATPAK_DEST}/lib/python3.9/site-packages --sip=${FLATPAK_DEST}/bin/sip --sip-incdir=${FLATPAK_DEST}/include --stubsdir=${FLATPAK_DEST}/lib/python3.9/site-packages --disable=QtSensors --disable=QtWebEngine --disable=QtQuick --disable=QtQml --disable=QtTest --disable=QtWebChannel --disable=QtWebEngineCore --disable=QWebEngineWidgets --disable=QtQuickWidgets --disable=QtSql --disable=QtXmlPatterns --disable=QtMultimedia --disable=QtMultimediaWidgets --disable=QtLocation --disable=QtDesigner --disable=QtOpenGL --disable=QtBluetooth --disable=QtWebKit --disable=QtWebKitWidgets --disable=QtNfc --disable=QtPositioning",
             "make -j $(nproc)",
             "make install"
         ],
@@ -87,7 +87,7 @@
             "name": "PyQt5_sip",
             "buildsystem": "simple",
             "build-commands": [
-                "python3 setup.py install --root ${FLATPAK_DEST}"
+                "python3 setup.py install --prefix=${FLATPAK_DEST} --root=/"
             ],
             "sources": [{
                 "type": "archive",
@@ -95,7 +95,7 @@
                 "sha256": "97e008795c453488f51a5c97dbff29cda7841afb1ca842c9e819d8e6cc0ae724"
            }]
         }]
-    }, 
+    },
     {
         "name": "libmpv",
         "cleanup": ["/include", "/lib/pkgconfig"],
@@ -474,17 +474,15 @@
             "pip3 install --prefix=${FLATPAK_DEST} ."
         ],
         "post-install": [
-            "mkdir -p ${FLATPAK_DEST}/share/fonts",
+            "install -d ${FLATPAK_DEST}/share/fonts",
             "cp vidcutter/fonts/* ${FLATPAK_DEST}/share/fonts",
-            "cp -R data/icons/ ${FLATPAK_DEST}/share/icons",
-            "mkdir -p ${FLATPAK_DEST}/share/applications",
-            "cp data/desktop/com.ozmartians.VidCutter.desktop ${FLATPAK_DEST}/share/applications",
-            "mkdir -p ${FLATPAK_DEST}/usr",
-            "ln -sf ${FLATPAK_DEST}/share ${FLATPAK_DEST}/usr"
+            "install -d ${FLATPAK_DEST}/share/icons/",
+            "cp -R data/icons/hicolor ${FLATPAK_DEST}/share/icons/",
+            "install -Dm644 -t ${FLATPAK_DEST}/share/applications data/desktop/com.ozmartians.VidCutter.desktop"
         ],
         "sources": [{
             "type": "git",
-            "commit": "4cf1458d832e6ac7a824d7963c6dc3a0e5c17574",
+            "commit": "5c4f83d047863dbb1b33ae00fe161de54456c7f5",
             "url": "https://github.com/ozmartian/vidcutter.git"
         }]
     }]
