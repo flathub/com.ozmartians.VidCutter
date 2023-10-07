@@ -1,7 +1,7 @@
-    {
+{
     "app-id": "com.ozmartians.VidCutter",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15-21.08",
+    "runtime-version": "5.15-22.08",
     "sdk": "org.kde.Sdk",
     "command": "vidcutter",
     "finish-args": [
@@ -13,7 +13,7 @@
         "--share=network",
         "--socket=pulseaudio",
         "--socket=wayland",
-        "--socket=x11",
+        "--socket=fallback-x11",
         "--talk-name=com.canonical.Unity.LauncherEntry"
     ],
     "cleanup": [
@@ -50,8 +50,8 @@
         ],
         "sources": [{
             "type": "archive",
-            "url": "https://files.pythonhosted.org/packages/7a/47/c7cc3d4ed15f09917838a2fb4e1759eafb6d2f37ebf7043af984d8b36cf7/simplejson-3.17.6.tar.gz",
-            "sha256": "cf98038d2abf63a1ada5730e91e84c642ba6c225b0198c3684151b1f80c5f8a6"
+            "url": "https://files.pythonhosted.org/packages/79/79/3ccb95bb4154952532f280f7a41979fbfb0fbbaee4d609810ecb01650afa/simplejson-3.19.2.tar.gz",
+            "sha256": "9eb442a2442ce417801c912df68e1f6ccfcd41577ae7274953ab3ad24ef7d82c"
         }]
     },
     {
@@ -107,13 +107,13 @@
         ],
         "sources": [{
             "type": "archive",
-            "url": "https://github.com/mpv-player/mpv/archive/v0.34.1.tar.gz",
-            "sha256": "32ded8c13b6398310fa27767378193dc1db6d78b006b70dbcbd3123a1445e746"
+            "url": "https://github.com/mpv-player/mpv/archive/v0.36.0.tar.gz",
+            "sha256": "29abc44f8ebee013bb2f9fe14d80b30db19b534c679056e4851ceadf5a5e8bf6"
         },
         {
             "type": "file",
-            "url": "https://waf.io/waf-2.0.23",
-            "sha256": "28a2e4583314a162cfcbffefb8a9202c1d7869040d30b5852da479b76d9c0491",
+            "url": "https://waf.io/waf-2.0.26",
+            "sha256": "dcec3e179f9c33a66544f1b3d7d91f20f6373530510fa6a858cddb6bfdcde14b",
             "dest-filename": "waf"
         }],
         "modules": [{
@@ -122,8 +122,8 @@
             "config-opts": ["--disable-static"],
             "sources": [{
                 "type": "archive",
-                "url": "https://github.com/libass/libass/releases/download/0.15.2/libass-0.15.2.tar.xz",
-                "sha256": "1be2df9c4485a57d78bb18c0a8ed157bc87a5a8dd48c661961c625cb112832fd"
+                "url": "https://github.com/libass/libass/releases/download/0.17.1/libass-0.17.1.tar.gz",
+                "sha256": "d653be97198a0543c69111122173c41a99e0b91426f9e17f06a858982c2fb03d"
             }],
             "modules": [{
                 "name": "fribidi",
@@ -174,8 +174,8 @@
             },
             "sources": [{
                 "type": "archive",
-                "url": "https://ffmpeg.org/releases/ffmpeg-5.0.1.tar.xz",
-                "sha256": "ef2efae259ce80a240de48ec85ecb062cecca26e4352ffb3fda562c21a93007b"
+                "url": "https://ffmpeg.org/releases/ffmpeg-5.1.2.tar.xz",
+                "sha256": "619e706d662c8420859832ddc259cd4d4096a48a2ce1eefd052db9e440eef3dc"
             }],
             "modules": [{
                 "name": "ffnvcodec",
@@ -188,10 +188,9 @@
                     "make install PREFIX=${FLATPAK_DEST}"
                 ],
                 "sources": [{
-                    "type": "git",
-                    "url": "https://git.videolan.org/git/ffmpeg/nv-codec-headers.git",
-                    "tag": "n11.1.5.1",
-                    "commit": "84483da70d903239d4536763fde8c7e6c4e80784"
+                    "type": "archive",
+                    "url": "https://github.com/FFmpeg/nv-codec-headers/releases/download/n12.1.14.0/nv-codec-headers-12.1.14.0.tar.gz",
+                    "sha256": "62b30ab37e4e9be0d0c5b37b8fee4b094e38e570984d56e1135a6b6c2c164c9f"
                 }]
             },
             {
@@ -220,14 +219,13 @@
                 ],
                 "sources": [{
                     "type": "archive",
-                    "url": "https://github.com/webmproject/libvpx/archive/refs/tags/v1.11.0.tar.gz",
-                    "sha256": "965e51c91ad9851e2337aebcc0f517440c637c506f3a03948062e3d5ea129a83"
+                    "url": "https://github.com/webmproject/libvpx/archive/refs/tags/v1.13.1.tar.gz",
+                    "sha256": "00dae80465567272abd077f59355f95ac91d7809a2d3006f9ace2637dd429d14"
                 }]
             },
             {
                 "name": "x264",
                 "config-opts": [
-                    "--prefix=${FLATPAK_DEST}",
                     "--enable-shared",
                     "--disable-cli",
                     "--disable-lavf",
@@ -316,6 +314,7 @@
         "subdir": "Project/GNU/CLI",
         "sources": [{
             "type": "git",
+            "commit": "efdde33b336394d058fe6a75447d3cca3ac81900",
             "url": "https://github.com/MediaArea/MediaInfo.git"
         }],
         "modules": [{
@@ -328,8 +327,8 @@
             ],
             "sources": [{
                 "type": "git",
-                "url": "https://github.com/MediaArea/ZenLib.git",
-                "commit": "5fe5d611141e720edecff87e51a2d4d0ad0586b1"
+                "commit": "1250d326306f4036d78dfdb7b24b344e729eb9f3",
+                "url": "https://github.com/MediaArea/ZenLib.git"
             }]
         },
         {
@@ -342,8 +341,8 @@
             ],
             "sources": [{
                 "type": "git",
-                "url": "https://github.com/MediaArea/MediaInfoLib.git",
-                "commit": "382a3a62311053e0c92e6b05c41f4c630044953e"
+                "commit": "a475e4ee71901e0f377688024c128e1634f180e1",
+                "url": "https://github.com/MediaArea/MediaInfoLib.git"
             }]
         }]
     },
@@ -362,7 +361,7 @@
         ],
         "sources": [{
             "type": "git",
-            "commit": "5c4f83d047863dbb1b33ae00fe161de54456c7f5",
+            "commit": "591a60b0eb78e7103cabf19297b4290eefbb04fe",
             "url": "https://github.com/ozmartian/vidcutter.git"
         }]
     }]
