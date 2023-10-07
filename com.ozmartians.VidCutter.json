@@ -13,7 +13,7 @@
         "--share=network",
         "--socket=pulseaudio",
         "--socket=wayland",
-        "--socket=x11",
+        "--socket=fallback-x11",
         "--talk-name=com.canonical.Unity.LauncherEntry"
     ],
     "cleanup": [
