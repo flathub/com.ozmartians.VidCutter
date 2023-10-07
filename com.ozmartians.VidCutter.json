@@ -315,6 +315,7 @@
         "subdir": "Project/GNU/CLI",
         "sources": [{
             "type": "git",
+            "tag": "v23.10",
             "url": "https://github.com/MediaArea/MediaInfo.git"
         }],
         "modules": [{
@@ -327,6 +328,7 @@
             ],
             "sources": [{
                 "type": "git",
+                "tag": "v0.4.41",
                 "url": "https://github.com/MediaArea/ZenLib.git"
             }]
         },
@@ -340,6 +342,7 @@
             ],
             "sources": [{
                 "type": "git",
+                "tag": "v23.1",
                 "url": "https://github.com/MediaArea/MediaInfoLib.git"
             }]
         }]
@@ -359,6 +362,7 @@
         ],
         "sources": [{
             "type": "git",
+            "commit": "8f01c76f0ec727fa336cb2cb6a645a58e3a29e64",
             "url": "https://github.com/ozmartian/vidcutter.git"
         }]
     }]
