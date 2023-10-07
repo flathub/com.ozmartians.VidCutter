@@ -314,7 +314,7 @@
         "subdir": "Project/GNU/CLI",
         "sources": [{
             "type": "git",
-            "tag": "v23.10",
+            "commit": "efdde33b336394d058fe6a75447d3cca3ac81900",
             "url": "https://github.com/MediaArea/MediaInfo.git"
         }],
         "modules": [{
@@ -327,7 +327,7 @@
             ],
             "sources": [{
                 "type": "git",
-                "tag": "v0.4.41",
+                "commit": "1250d326306f4036d78dfdb7b24b344e729eb9f3",
                 "url": "https://github.com/MediaArea/ZenLib.git"
             }]
         },
@@ -341,7 +341,7 @@
             ],
             "sources": [{
                 "type": "git",
-                "tag": "v23.1",
+                "commit": "a475e4ee71901e0f377688024c128e1634f180e1",
                 "url": "https://github.com/MediaArea/MediaInfoLib.git"
             }]
         }]
