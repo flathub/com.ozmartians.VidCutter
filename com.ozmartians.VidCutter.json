@@ -226,7 +226,6 @@
             {
                 "name": "x264",
                 "config-opts": [
-                    "--prefix=${FLATPAK_DEST}",
                     "--enable-shared",
                     "--disable-cli",
                     "--disable-lavf",
