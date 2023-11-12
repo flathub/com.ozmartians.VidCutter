@@ -73,14 +73,12 @@
             "name": "sip",
             "buildsystem": "simple",
             "build-commands": [
-                "python3 configure.py --sip-module PyQt5.sip -b ${FLATPAK_DEST}/bin -d ${FLATPAK_DEST}/lib/python3.11/site-packages -e ${FLATPAK_DEST}/include -v ${FLATPAK_DEST}/share/sip --stubsdir=${FLATPAK_DEST}/lib/python3.11/site-packages",
-                "make",
-                "make install"
+                "python3 setup.py install --prefix=${FLATPAK_DEST} --root=/"
             ],
             "sources": [{
                 "type": "archive",
-                "url": "https://files.pythonhosted.org/packages/33/e9/27730ac17713c0a80d81d8f3bb56213f1549d96f9dc183fd16a7eec6287c/sip-5.5.0.tar.gz",
-                "sha256": "5d024c419b30fea8a6de8c71a560c7ab0bc3c221fbfb14d55a5b865bd58eaac5"
+                "url": "https://files.pythonhosted.org/packages/a6/4e/c34eee70109e9a8110672f074fc18b5022bf4b9b4c92641245c73ae0b21a/sip-6.7.12.tar.gz",
+                "sha256": "08e66f742592eb818ac8fda4173e2ed64c9f2d40b70bee11db1c499127d98450"
             }]
         },
         {
