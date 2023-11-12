@@ -79,7 +79,7 @@
             ],
             "sources": [{
                 "type": "archive",
-                "url": "https://files.pythonhosted.org/packages/a6/4e/c34eee70109e9a8110672f074fc18b5022bf4b9b4c92641245c73ae0b21a/sip-6.7.12.tar.gz"
+                "url": "https://files.pythonhosted.org/packages/a6/4e/c34eee70109e9a8110672f074fc18b5022bf4b9b4c92641245c73ae0b21a/sip-6.7.12.tar.gz",
                 "sha256": "08e66f742592eb818ac8fda4173e2ed64c9f2d40b70bee11db1c499127d98450"
             }]
         },
