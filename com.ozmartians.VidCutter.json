@@ -56,11 +56,11 @@
     },
     {
         "name": "PyQt5",
-        "cleanup": ["/include", "/lib/python3.11/site-packages/*.pyi"],
+        "cleanup": ["/bin/sip*", "/include", "/lib/python3.11/site-packages/*.pyi"],
         "config-opts": ["--disable-static", "--enable-x11"],
         "buildsystem": "simple",
         "build-commands": [
-            "python3 configure.py --confirm-license --no-docstrings --assume-shared --no-sip-files --no-qml-plugin --no-tools --no-qsci-api -d ${FLATPAK_DEST}/lib/python3.11/site-packages --stubsdir=${FLATPAK_DEST}/lib/python3.11/site-packages --disable=QtSensors --disable=QtWebEngine --disable=QtQuick --disable=QtQml --disable=QtTest --disable=QtWebChannel --disable=QtWebEngineCore --disable=QWebEngineWidgets --disable=QtQuickWidgets --disable=QtSql --disable=QtXmlPatterns --disable=QtMultimedia --disable=QtMultimediaWidgets --disable=QtLocation --disable=QtDesigner --disable=QtOpenGL --disable=QtBluetooth --disable=QtWebKit --disable=QtWebKitWidgets --disable=QtNfc --disable=QtPositioning",
+            "python3 configure.py --confirm-license --no-docstrings --assume-shared --no-sip-files --no-qml-plugin --no-tools --no-qsci-api -d ${FLATPAK_DEST}/lib/python3.11/site-packages --sip=${FLATPAK_DEST}/bin/sip --sip-incdir=${FLATPAK_DEST}/include --stubsdir=${FLATPAK_DEST}/lib/python3.11/site-packages --disable=QtSensors --disable=QtWebEngine --disable=QtQuick --disable=QtQml --disable=QtTest --disable=QtWebChannel --disable=QtWebEngineCore --disable=QWebEngineWidgets --disable=QtQuickWidgets --disable=QtSql --disable=QtXmlPatterns --disable=QtMultimedia --disable=QtMultimediaWidgets --disable=QtLocation --disable=QtDesigner --disable=QtOpenGL --disable=QtBluetooth --disable=QtWebKit --disable=QtWebKitWidgets --disable=QtNfc --disable=QtPositioning",
             "make -j $(nproc)",
             "make install"
         ],
@@ -70,6 +70,20 @@
             "sha256": "d46b7804b1b10a4ff91753f8113e5b5580d2b4462f3226288e2d84497334898a"
         }],
           "modules": [{
+            "name": "sip",
+            "buildsystem": "simple",
+            "build-commands": [
+                "python3 configure.py --sip-module PyQt5.sip -b ${FLATPAK_DEST}/bin -d ${FLATPAK_DEST}/lib/python3.11/site-packages -e ${FLATPAK_DEST}/include -v ${FLATPAK_DEST}/share/sip --stubsdir=${FLATPAK_DEST}/lib/python3.11/site-packages",
+                "make",
+                "make install"
+            ],
+            "sources": [{
+                "type": "archive",
+                "url": "https://files.pythonhosted.org/packages/33/e9/27730ac17713c0a80d81d8f3bb56213f1549d96f9dc183fd16a7eec6287c/sip-5.5.0.tar.gz",
+                "sha256": "5d024c419b30fea8a6de8c71a560c7ab0bc3c221fbfb14d55a5b865bd58eaac5"
+            }]
+        },
+        {
             "name": "PyQt5_sip",
             "buildsystem": "simple",
             "build-commands": [
