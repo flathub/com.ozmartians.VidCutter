@@ -73,7 +73,7 @@
             "name": "packaging",
             "buildsystem": "simple",
             "build-commands": [
-                "python3 setup.py install --prefix=${FLATPAK_DEST} --root=/"
+                "pip3 install --prefix=${FLATPAK_DEST} ."
             ],
             "sources": [{
                 "type": "archive",
