@@ -365,7 +365,7 @@
         ],
         "sources": [{
             "type": "git",
-            "commit": "36fc9fa3d2c85bd532bbca49e1bfaf1fd6a2ba62",
+            "commit": "9233c35fa69fd766f63ab89f586fa2069c90e34d",
             "url": "https://github.com/ozmartian/vidcutter.git"
         }]
     }]
