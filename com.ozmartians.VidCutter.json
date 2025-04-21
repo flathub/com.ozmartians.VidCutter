@@ -38,8 +38,8 @@
         ],
         "sources": [{
             "type": "archive",
-            "url": "https://files.pythonhosted.org/packages/72/b6/970868d44b619292f1f54501923c69c9bd0ab1d2d44cf02590eac2706f4f/PyOpenGL-3.1.7.tar.gz",
-            "sha256": "eef31a3888e6984fd4d8e6c9961b184c9813ca82604d37fe3da80eb000a76c86"
+            "url": "https://files.pythonhosted.org/packages/5b/01/f8fd986bc7f456f1a925ee0239f0391838ade92cdb6e5b674ffb8b86cfd6/PyOpenGL-3.1.6.tar.gz",
+            "sha256": "8ea6c8773927eda7405bffc6f5bb93be81569a7b05c8cac50cd94e969dce5e27"
         }]
     },
     {
