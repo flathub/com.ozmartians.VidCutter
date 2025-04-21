@@ -66,8 +66,8 @@
         ],
         "sources": [{
             "type": "archive",
-            "url": "https://files.pythonhosted.org/packages/8e/a4/d5e4bf99dd50134c88b95e926d7b81aad2473b47fde5e3e4eac2c69a8942/PyQt5-5.15.4.tar.gz",
-            "sha256": "2a69597e0dd11caabe75fae133feca66387819fc9bc050f547e5551bce97e5be"
+            "url": "https://files.pythonhosted.org/packages/0e/07/c9ed0bd428df6f87183fca565a79fee19fa7c88c7f00a7f011ab4379e77a/PyQt5-5.15.11.tar.gz",
+            "sha256": "fda45743ebb4a27b4b1a51c6d8ef455c4c1b5d610c90d2934c7802b5c1557c52"
         }],
           "modules": [{
             "name": "sip",
@@ -79,8 +79,8 @@
             ],
             "sources": [{
                 "type": "archive",
-                "url": "https://www.riverbankcomputing.com/static/Downloads/sip/4.19.25/sip-4.19.25.tar.gz",
-                "sha256": "b39d93e937647807bac23579edbff25fe46d16213f708370072574ab1f1b4211"
+                "url": "https://files.pythonhosted.org/packages/62/9a/78122735697dbfc6c1db363627309eb0da7e44d8c05ba017b08666530586/sip-6.10.0.tar.gz",
+                "sha256": "fa0515697d4c98dbe04d9e898d816de1427e5b9ae5d0e152169109fd21f5d29c"
             },
             {
                 "type": "patch",
@@ -95,8 +95,8 @@
             ],
             "sources": [{
                 "type": "archive",
-                "url": "https://files.pythonhosted.org/packages/a3/82/08a09deda701feb930aa6462f2f22e07cbcb9aa7c1ef361a090221b4587e/PyQt5_sip-12.10.1.tar.gz",
-                "sha256": "97e008795c453488f51a5c97dbff29cda7841afb1ca842c9e819d8e6cc0ae724"
+                "url": "https://files.pythonhosted.org/packages/01/79/086b50414bafa71df494398ad277d72e58229a3d1c1b1c766d12b14c2e6d/pyqt5_sip-12.17.0.tar.gz",
+                "sha256": "682dadcdbd2239af9fdc0c0628e2776b820e128bec88b49b8d692fe682f90b4f"
            }]
         }]
     },
