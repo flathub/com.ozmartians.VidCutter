@@ -23,8 +23,7 @@
         "/lib/pkgconfig",
         "/share/man"
     ],
-    "modules": [
-    {
+    "modules": [{
         "name": "PyOpenGL",
         "cleanup": [
             "/include",
@@ -67,8 +66,8 @@
         ],
         "sources": [{
             "type": "archive",
-            "url": "https://files.pythonhosted.org/packages/3b/27/fd81188a35f37be9b3b4c2db1654d9439d1418823916fe702ac3658c9c41/PyQt5-5.15.6.tar.gz",
-            "sha256": "80343bcab95ffba619f2ed2467fd828ffeb0a251ad7225be5fc06dcc333af452"
+            "url": "https://files.pythonhosted.org/packages/8e/a4/d5e4bf99dd50134c88b95e926d7b81aad2473b47fde5e3e4eac2c69a8942/PyQt5-5.15.4.tar.gz",
+            "sha256": "2a69597e0dd11caabe75fae133feca66387819fc9bc050f547e5551bce97e5be"
         }],
           "modules": [{
             "name": "sip",
@@ -362,11 +361,12 @@
             "cp vidcutter/fonts/* ${FLATPAK_DEST}/share/fonts",
             "install -d ${FLATPAK_DEST}/share/icons/",
             "cp -R data/icons/hicolor ${FLATPAK_DEST}/share/icons/",
+            "install -Dm644 -t ${FLATPAK_DEST}/share/appdata com.ozmartians.VidCutter.appdata.xml",
             "install -Dm644 -t ${FLATPAK_DEST}/share/applications data/desktop/com.ozmartians.VidCutter.desktop"
         ],
         "sources": [{
             "type": "git",
-            "commit": "9233c35fa69fd766f63ab89f586fa2069c90e34d",
+            "commit": "591a60b0eb78e7103cabf19297b4290eefbb04fe",
             "url": "https://github.com/ozmartian/vidcutter.git"
         }]
     }]
