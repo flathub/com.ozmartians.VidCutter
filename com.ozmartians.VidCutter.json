@@ -38,8 +38,8 @@
         ],
         "sources": [{
             "type": "archive",
-            "url": "https://files.pythonhosted.org/packages/5b/01/f8fd986bc7f456f1a925ee0239f0391838ade92cdb6e5b674ffb8b86cfd6/PyOpenGL-3.1.6.tar.gz",
-            "sha256": "8ea6c8773927eda7405bffc6f5bb93be81569a7b05c8cac50cd94e969dce5e27"
+            "url": "https://files.pythonhosted.org/packages/c0/42/71080db298df3ddb7e3090bfea8fd7c300894d8b10954c22f8719bd434eb/pyopengl-3.1.9.tar.gz",
+            "sha256": "28ebd82c5f4491a418aeca9672dffb3adbe7d33b39eada4548a5b4e8c03f60c8"
         }]
     },
     {
@@ -50,8 +50,8 @@
         ],
         "sources": [{
             "type": "archive",
-            "url": "https://files.pythonhosted.org/packages/79/79/3ccb95bb4154952532f280f7a41979fbfb0fbbaee4d609810ecb01650afa/simplejson-3.19.2.tar.gz",
-            "sha256": "9eb442a2442ce417801c912df68e1f6ccfcd41577ae7274953ab3ad24ef7d82c"
+            "url": "https://files.pythonhosted.org/packages/af/92/51b417685abd96b31308b61b9acce7ec50d8e1de8fbc39a7fd4962c60689/simplejson-3.20.1.tar.gz",
+            "sha256": "e64139b4ec4f1f24c142ff7dcafe55a22b811a74d86d66560c8815687143037d"
         }]
     },
     {
