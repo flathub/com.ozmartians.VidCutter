@@ -81,10 +81,6 @@
                 "type": "archive",
                 "url": "https://files.pythonhosted.org/packages/62/9a/78122735697dbfc6c1db363627309eb0da7e44d8c05ba017b08666530586/sip-6.10.0.tar.gz",
                 "sha256": "fa0515697d4c98dbe04d9e898d816de1427e5b9ae5d0e152169109fd21f5d29c"
-            },
-            {
-                "type": "patch",
-                "path": "0001-Fix-compilation-against-Python-3.11.patch"
             }]
         },
         {
