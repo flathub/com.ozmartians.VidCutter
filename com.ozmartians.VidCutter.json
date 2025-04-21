@@ -354,6 +354,7 @@
         "name": "vidcutter",
         "buildsystem": "simple",
         "build-commands": [
+            "rm vidcutter/libs/pympv/mpv.c",
             "pip3 install --prefix=${FLATPAK_DEST} ."
         ],
         "post-install": [
