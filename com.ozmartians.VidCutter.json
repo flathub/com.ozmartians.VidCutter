@@ -70,20 +70,6 @@
             "sha256": "fda45743ebb4a27b4b1a51c6d8ef455c4c1b5d610c90d2934c7802b5c1557c52"
         }],
           "modules": [{
-            "name": "sip",
-            "buildsystem": "simple",
-            "build-commands": [
-                "python3 configure.py --sip-module PyQt5.sip -b ${FLATPAK_DEST}/bin -d ${FLATPAK_DEST}/lib/python3.12/site-packages -e ${FLATPAK_DEST}/include -v ${FLATPAK_DEST}/share/sip --stubsdir=${FLATPAK_DEST}/lib/python3.12/site-packages",
-                "make",
-                "make install"
-            ],
-            "sources": [{
-                "type": "archive",
-                "url": "https://files.pythonhosted.org/packages/62/9a/78122735697dbfc6c1db363627309eb0da7e44d8c05ba017b08666530586/sip-6.10.0.tar.gz",
-                "sha256": "fa0515697d4c98dbe04d9e898d816de1427e5b9ae5d0e152169109fd21f5d29c"
-            }]
-        },
-        {
             "name": "PyQt5_sip",
             "buildsystem": "simple",
             "build-commands": [
