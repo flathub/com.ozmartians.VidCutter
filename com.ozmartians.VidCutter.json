@@ -111,8 +111,8 @@
         ],
         "sources": [{
             "type": "archive",
-            "url": "https://github.com/mpv-player/mpv/archive/v0.39.0.tar.gz",
-            "sha256": "2ca92437affb62c2b559b4419ea4785c70d023590500e8a52e95ea3ab4554683"
+            "url": "https://github.com/mpv-player/mpv/archive/v0.37.0.tar.gz",
+            "sha256": "1d2d4adbaf048a2fa6ee134575032c4b2dad9a7efafd5b3e69b88db935afaddf"
         },
         {
             "type": "file",
