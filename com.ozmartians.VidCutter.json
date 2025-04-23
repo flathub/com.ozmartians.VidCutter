@@ -149,7 +149,7 @@
 					"-Ddemos=false",
 					"-Dvulkan=enabled",
 					"-Dopengl=enabled"
-                ],
+                ]
             },
             "sources": [{
                 "type": "archive",
