@@ -107,8 +107,8 @@
         "config-opts": [
             "-Dlibmpv=true",
             "-Dcplayer=false",
-            "-Dalsa=false",
-            "-Dmanpage-build=false"
+            "-Dalsa=disabled",
+            "-Dmanpage-build=disabled"
         ],
         "sources": [{
             "type": "archive",
