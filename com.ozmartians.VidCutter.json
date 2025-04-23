@@ -116,8 +116,8 @@
         },
         {
             "type": "file",
-            "url": "https://waf.io/waf-2.0.26",
-            "sha256": "dcec3e179f9c33a66544f1b3d7d91f20f6373530510fa6a858cddb6bfdcde14b",
+            "url": "https://waf.io/waf-2.1.0",
+            "sha256": "f43006c7754b4a03fd69bd6f3896ff4750cf135da980e29e38d8dfd4a2891f32",
             "dest-filename": "waf"
         }],
         "modules": [{
