@@ -105,10 +105,10 @@
         "cleanup": ["/include", "/lib/pkgconfig"],
         "buildsystem": "meson",
         "config-opts": [
-            "--libmpv=true",
-            "--cplayer=false",
-            "--alsa=false",
-            "--manpage-build=false"
+            "-Dlibmpv=true",
+            "-Dcplayer=false",
+            "-Dalsa=false",
+            "-Dmanpage-build=false"
         ],
         "sources": [{
             "type": "archive",
@@ -148,7 +148,7 @@
                 "config-opts": [
 					"-Ddemos=false",
 					"-Dvulkan=enabled",
-					"-Dopengl=enabled"
+					"-Dopengl=disabled"
                 ]
             },
             "sources": [{
