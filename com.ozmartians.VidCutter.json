@@ -103,22 +103,17 @@
     {
         "name": "libmpv",
         "cleanup": ["/include", "/lib/pkgconfig"],
-        "buildsystem": "simple",
-        "build-commands": [
-            "python3 waf configure --prefix=${FLATPAK_DEST} --enable-libmpv-shared --disable-cplayer --disable-alsa --disable-manpage-build --disable-debug-build",
-            "python3 waf build",
-            "python3 waf install"
+        "buildsystem": "meson",
+        "config-opts": [
+            "--libmpv=true",
+            "--cplayer=false",
+            "--alsa=false",
+            "--manpage-build=false"
         ],
         "sources": [{
             "type": "archive",
-            "url": "https://github.com/mpv-player/mpv/archive/v0.36.0.tar.gz",
-            "sha256": "29abc44f8ebee013bb2f9fe14d80b30db19b534c679056e4851ceadf5a5e8bf6"
-        },
-        {
-            "type": "file",
-            "url": "https://waf.io/waf-2.0.26",
-            "sha256": "dcec3e179f9c33a66544f1b3d7d91f20f6373530510fa6a858cddb6bfdcde14b",
-            "dest-filename": "waf"
+            "url": "https://github.com/mpv-player/mpv/archive/v0.37.0.tar.gz",
+            "sha256": "1d2d4adbaf048a2fa6ee134575032c4b2dad9a7efafd5b3e69b88db935afaddf"
         }],
         "modules": [{
             "name": "libass",
@@ -143,6 +138,23 @@
                     "tag": "v1.0.12",
                     "commit": "6428d8469e536bcbb6e12c7b79ba6659371c435a"
                 }]
+            }]
+        },
+        {
+            "name": "libplacebo",
+            "cleanup": ["/include", "/lib/pkgconfig"],
+            "buildsystem": "meson",
+            "build-options": {
+                "config-opts": [
+					"-Ddemos=false",
+					"-Dvulkan=enabled",
+					"-Dopengl=enabled"
+                ],
+            },
+            "sources": [{
+                "type": "archive",
+                "url": "https://github.com/haasn/libplacebo/archive/refs/tags/v6.338.2.tar.gz",
+                "sha256": "2f1e624e09d72a8c9db70f910f7560e764a1c126dae42acc5b3bcef836a7aec6"
             }]
         },
         {
@@ -365,7 +377,7 @@
         ],
         "sources": [{
             "type": "git",
-            "commit": "f3a3b6b5d4d7a2382c8cba587db6db1a21e7a304",
+            "commit": "d992bac897f36bc460cc3b818eee416f03d04479",
             "url": "https://github.com/ozmartian/vidcutter.git"
         }]
     }]
