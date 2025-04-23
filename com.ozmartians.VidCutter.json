@@ -111,13 +111,13 @@
         ],
         "sources": [{
             "type": "archive",
-            "url": "https://github.com/mpv-player/mpv/archive/v0.37.0.tar.gz",
-            "sha256": "1d2d4adbaf048a2fa6ee134575032c4b2dad9a7efafd5b3e69b88db935afaddf"
+            "url": "https://github.com/mpv-player/mpv/archive/v0.36.0.tar.gz",
+            "sha256": "29abc44f8ebee013bb2f9fe14d80b30db19b534c679056e4851ceadf5a5e8bf6"
         },
         {
             "type": "file",
-            "url": "https://waf.io/waf-2.1.0",
-            "sha256": "f43006c7754b4a03fd69bd6f3896ff4750cf135da980e29e38d8dfd4a2891f32",
+            "url": "https://waf.io/waf-2.0.26",
+            "sha256": "dcec3e179f9c33a66544f1b3d7d91f20f6373530510fa6a858cddb6bfdcde14b",
             "dest-filename": "waf"
         }],
         "modules": [{
