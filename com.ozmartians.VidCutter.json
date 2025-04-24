@@ -112,8 +112,8 @@
         ],
         "sources": [{
             "type": "archive",
-            "url": "https://github.com/mpv-player/mpv/archive/v0.37.0.tar.gz",
-            "sha256": "1d2d4adbaf048a2fa6ee134575032c4b2dad9a7efafd5b3e69b88db935afaddf"
+            "url": "https://github.com/mpv-player/mpv/archive/v0.38.0.tar.gz",
+            "sha256": "86d9ef40b6058732f67b46d0bbda24a074fae860b3eaae05bab3145041303066"
         }],
         "modules": [{
             "name": "libass",
@@ -389,7 +389,7 @@
         ],
         "sources": [{
             "type": "git",
-            "commit": "d992bac897f36bc460cc3b818eee416f03d04479",
+            "commit": "db6818f11bbb4d5598dfc5ceeddf7f81c7078499",
             "url": "https://github.com/ozmartian/vidcutter.git"
         }]
     }]
