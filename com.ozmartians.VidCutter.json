@@ -50,8 +50,8 @@
         ],
         "sources": [{
             "type": "archive",
-            "url": "https://files.pythonhosted.org/packages/79/79/3ccb95bb4154952532f280f7a41979fbfb0fbbaee4d609810ecb01650afa/simplejson-3.19.2.tar.gz",
-            "sha256": "9eb442a2442ce417801c912df68e1f6ccfcd41577ae7274953ab3ad24ef7d82c"
+            "url": "https://files.pythonhosted.org/packages/af/92/51b417685abd96b31308b61b9acce7ec50d8e1de8fbc39a7fd4962c60689/simplejson-3.20.1.tar.gz",
+            "sha256": "e64139b4ec4f1f24c142ff7dcafe55a22b811a74d86d66560c8815687143037d"
         }]
     },
     {
@@ -103,22 +103,17 @@
     {
         "name": "libmpv",
         "cleanup": ["/include", "/lib/pkgconfig"],
-        "buildsystem": "simple",
-        "build-commands": [
-            "python3 waf configure --prefix=${FLATPAK_DEST} --enable-libmpv-shared --disable-cplayer --disable-alsa --disable-manpage-build --disable-debug-build",
-            "python3 waf build",
-            "python3 waf install"
+        "buildsystem": "meson",
+        "config-opts": [
+            "-Dlibmpv=true",
+            "-Dcplayer=false",
+            "-Dalsa=disabled",
+            "-Dmanpage-build=disabled"
         ],
         "sources": [{
             "type": "archive",
-            "url": "https://github.com/mpv-player/mpv/archive/v0.36.0.tar.gz",
-            "sha256": "29abc44f8ebee013bb2f9fe14d80b30db19b534c679056e4851ceadf5a5e8bf6"
-        },
-        {
-            "type": "file",
-            "url": "https://waf.io/waf-2.0.26",
-            "sha256": "dcec3e179f9c33a66544f1b3d7d91f20f6373530510fa6a858cddb6bfdcde14b",
-            "dest-filename": "waf"
+            "url": "https://github.com/mpv-player/mpv/archive/v0.38.0.tar.gz",
+            "sha256": "86d9ef40b6058732f67b46d0bbda24a074fae860b3eaae05bab3145041303066"
         }],
         "modules": [{
             "name": "libass",
@@ -142,6 +137,35 @@
                     "url": "https://github.com/fribidi/fribidi.git",
                     "tag": "v1.0.12",
                     "commit": "6428d8469e536bcbb6e12c7b79ba6659371c435a"
+                }]
+            }]
+        },
+        {
+            "name": "libplacebo",
+            "cleanup": ["/include", "/lib/pkgconfig"],
+            "buildsystem": "meson",
+            "build-options": {
+                "config-opts": [
+					"-Ddemos=false",
+					"-Dvulkan=enabled",
+					"-Dopengl=disabled"
+                ]
+            },
+            "sources": [{
+                "type": "archive",
+                "url": "https://github.com/haasn/libplacebo/archive/refs/tags/v6.338.2.tar.gz",
+                "sha256": "2f1e624e09d72a8c9db70f910f7560e764a1c126dae42acc5b3bcef836a7aec6"
+            }],
+            "modules": [{
+                "name": "jinja2",
+                "buildsystem": "simple",
+                "build-commands": [
+                    "python3 setup.py install --prefix=${FLATPAK_DEST} --root=/"
+                ],
+                "sources": [{
+                    "type": "archive",
+                    "url": "https://files.pythonhosted.org/packages/7a/ff/75c28576a1d900e87eb6335b063fab47a8ef3c8b4d88524c4bf78f670cce/Jinja2-3.1.2.tar.gz",
+                    "sha256": "31351a702a408a9e7595a8fc6150fc3f43bb6bf7e319770cbc0db9df9437e852"
                 }]
             }]
         },
@@ -354,6 +378,7 @@
         "name": "vidcutter",
         "buildsystem": "simple",
         "build-commands": [
+            "rm vidcutter/libs/pympv/mpv.c",
             "pip3 install --prefix=${FLATPAK_DEST} ."
         ],
         "post-install": [
@@ -365,8 +390,9 @@
         ],
         "sources": [{
             "type": "git",
-            "commit": "9233c35fa69fd766f63ab89f586fa2069c90e34d",
+            "commit": "db6818f11bbb4d5598dfc5ceeddf7f81c7078499",
             "url": "https://github.com/ozmartian/vidcutter.git"
         }]
     }]
 }
+
